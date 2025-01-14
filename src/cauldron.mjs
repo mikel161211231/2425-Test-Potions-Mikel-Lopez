@@ -1,5 +1,5 @@
-import Antidote from "./potions/Antidote.js";
-import Elixir from "./potions/Elixir.js";
+import Antidote from "./potions/Antidote";
+import Elixir from "./potions/Elixir";
 import Essence from "./potions/Essence";
 import FailedPotion from "./potions/FailedPotion";
 import Poison from "./potions/Poison";
@@ -9,7 +9,7 @@ import Venom from "./potions/Venom";
 
 
 
-class Cauldron {
+export default class Cauldron {
     constructor(ingredients, diseases, playerData) {
         this.ingredients = ingredients;
         this.diseases = diseases;
@@ -55,7 +55,7 @@ class Cauldron {
     }
 
     isPotionOfPurification() {
-        const ingredients = this.ingredients.ingredients;
+        const ingredients = this.ingredients;
         const requiredIngredientsName = ["Dragon's Blood Resin", 'Gloomshade Moss']; // Required ingredients to create a Potion of Purification.
         const areCorrectIngredients = requiredIngredientsName.every(requiredIngredientName => ingredients.some(ingredient => ingredient.name === requiredIngredientName));
         return (ingredients.length === 2 && areCorrectIngredients); 
@@ -161,5 +161,3 @@ class Cauldron {
     }
 
 }
-
-export default Cauldron;

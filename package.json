@@ -1,11 +1,17 @@
 {
   "name": "2425-test-potions-mikel-lopez",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "cauldron.js",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
   "scripts": {
-    "test": "npm run test"
+    "test": "jest --config=jest.config.js"
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@babel/preset-env": "^7.26.0"
+  }
 }
