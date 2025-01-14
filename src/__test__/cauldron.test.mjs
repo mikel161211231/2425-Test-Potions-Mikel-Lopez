@@ -688,7 +688,7 @@ describe('Cuando los efectos de ingredientes asociados llevaran los nombres "Cle
 
                 const cauldron = new Cauldron(ingredients, diseases)
                 const createdPotion = cauldron.createPotion(ingredients)
-                expect(createdPotion.name).toMatch(/cleanse_parchment/);
+                expect(createdPotion.name).toMatch(/Potion of Purification/);
     })
 })
 
